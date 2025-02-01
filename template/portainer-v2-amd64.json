@@ -3811,6 +3811,58 @@
 			],
 			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://jellyfin.org/\" target=\"_blank\">https://jellyfin.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-jellyfin\" target=\"_blank\">https://docs.linuxserver.io/images/docker-jellyfin</a><br><br><br>"
 		},
+		----BY VIKAS
+		{
+			"categories": [
+				"tools",
+				"Productivity"
+			],
+			"description": "Jenkins Continuous Integration and Delivery server.",
+			"env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "1000",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"default": "Asia/Kolkata",
+					"label": "TZ",
+					"name": "TZ"
+				}
+			],
+			"image": "jenkins/jenkins:lts-jdk17",
+			"logo": "https://www.jenkins.io/sites/default/files/jenkins_logo.png",
+			"name": "jenkins",
+			"platform": "linux",
+			"ports": [
+				"8096:8096/tcp",
+				"8920:8920/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Jenkins",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/Jenkins",
+					"container": "/config"
+				},
+				{
+					"bind": "/portainer/TV",
+					"container": "/data/tvshows"
+				},
+				{
+					"bind": "/portainer/Movies",
+					"container": "/data/movies"
+				}
+			],
+			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://jellyfin.org/\" target=\"_blank\">https://jellyfin.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-jellyfin\" target=\"_blank\">https://docs.linuxserver.io/images/docker-jellyfin</a><br><br><br>"
+		},
+		----BY VIKAS
 		{
 			"categories": [
 				"Video",
